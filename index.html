@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <!--
 	Spectral by HTML5 UP
@@ -177,26 +179,25 @@
 				<!-- CTA -->
 					<section id="cta" class="wrapper style4">
 						<div class="inner">
-							<form method="post" action="mailto:oscarkremer97@gmail.com">
+							<form id="form" method="POST" action="http://formspree.io/oscarkremer97@gmail.com" method="post">
 								<h2>Contact me</h2>
 								<p>Aliquamectetur interdum endrerit imperdiet amet eleifend fringilla.</p>	
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+										<input type="text" name="name" id="name" value="" placeholder="Name" />
 									</div>
 									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy</label>
+										<input type="email" name="email" id="email" value="" placeholder="Email" />
 									</div>
 									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										<input name="subject" type="text" id="subject" placeholder="Subject">
+									</div>
+									<div class="col-12">									
+										<textarea name="body" id="body" placeholder="Enter your message" rows="6"></textarea>
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="submit" name="submit" value="Send Message" class="primary" /></li>
 											<li><input type="reset" value="Reset" /></li>
 											<li><a href="docs/curriculo_en.pdf" class="button primary icon solid fa-download">
 												My Curriculum
