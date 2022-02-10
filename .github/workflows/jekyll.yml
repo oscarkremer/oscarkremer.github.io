@@ -16,7 +16,6 @@ jobs:
         ref: main
         submodules: recursive
         repository: oscarkremer/oscarkremer.github.io
-        token: ***
         ssh-strict: true
         persist-credentials: true
         clean: true
