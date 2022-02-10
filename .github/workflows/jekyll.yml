@@ -33,9 +33,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Dep the site in the jekyll/builder container
+      uses: actions/deploy-pages@v1
+      with: 
+          token: ***
+          timeout: 600000
+          error_count: 10
+          reporting_interval: 1000
