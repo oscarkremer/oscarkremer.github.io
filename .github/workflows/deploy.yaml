@@ -11,3 +11,4 @@ jobs:
       - name: Setting environment variables
         env: 
           FIREBASE_KEY: ${{ secrets.FIREBASE_KEY }}
+        run: echo "here"
