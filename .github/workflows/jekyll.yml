@@ -10,7 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: primeiropassinho
+    - uses: actions/jekyll-build-pages@v1
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         ref: main
@@ -21,17 +22,16 @@ jobs:
         clean: true
         fetch-depth: 1
         lfs: false
-    - uses: actions/jekyll-build-pages@v1
-    - name: passinho
-      uses: actions/upload-artifact@main
-      with:
-        path: ./artifact.tar
-        if-no-files-found: warn
-    - name: Build the site in the jekyll/builder container
+    - name: Build page with Jekyll
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Upload Artifact
+      uses: actions/upload-artifact@main
+      with:
+        path: ./artifact.tar
+        if-no-files-found: warn
   deploy:
     needs: build
     runs-on: ubuntu-latest
