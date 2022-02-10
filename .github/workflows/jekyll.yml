@@ -34,8 +34,7 @@ jobs:
     steps:
     - name: Dep the site in the jekyll/builder container
       uses: actions/deploy-pages@v1      
-      with: 
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 1000
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: . # The folder the action should deploy.
