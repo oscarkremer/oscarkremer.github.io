@@ -1,0 +1,13 @@
+name: Deploy
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  gh-pages-deploy:
+    name: Deploying to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting environment variables
+        env: 
+          FIREBASE_KEY: ${{ secrets.FIREBASE_KEY }}
