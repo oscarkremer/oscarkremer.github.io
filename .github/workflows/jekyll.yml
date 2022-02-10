@@ -36,7 +36,6 @@ jobs:
     - name: Dep the site in the jekyll/builder container
       uses: actions/deploy-pages@v1
       with: 
-          token: ***
           timeout: 600000
           error_count: 10
           reporting_interval: 1000
