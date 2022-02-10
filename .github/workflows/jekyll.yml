@@ -15,7 +15,7 @@ jobs:
     - uses: actions/upload-artifact@main
       with:
         name: teste
-        path: /
+        path: ${{ github.workspace }}/
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
