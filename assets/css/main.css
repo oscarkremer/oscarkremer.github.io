@@ -159,7 +159,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 1em 0;
+		margin: 0 0 2em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2116,7 +2116,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 30%;
 		}
 
 			.image.left img, .image.right img {
@@ -2183,7 +2183,6 @@ input, select, textarea {
 		display: flex;
 		cursor: default;
 		list-style: none;
-		margin-left: -1em;
 		padding-left: 0;
 	}
 
