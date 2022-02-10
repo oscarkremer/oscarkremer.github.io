@@ -233,8 +233,9 @@
 			<script src="assets/js/main.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
 			<script>
+				
 				const firebaseConfig = {
-				apiKey: "AIzaSyDaXcgTCYeSjEV46Mv12el8lUYsLXeLu4g",
+				apiKey: process.env.FIREBASE_KEY,
 				authDomain: "emailwithfirebase-a2cac.firebaseapp.com",
 				projectId: "emailwithfirebase-a2cac",
 				storageBucket: "emailwithfirebase-a2cac.appspot.com",
