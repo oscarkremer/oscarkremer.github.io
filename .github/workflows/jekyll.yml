@@ -1,16 +1,4 @@
 name: Jekyll site CI
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  issues: write
-  packages: write
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
-
 on:
   push:
     branches: [ main ]
