@@ -23,10 +23,7 @@ jobs:
         lfs: false
     - uses: actions/jekyll-build-pages@v1
     - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      run:  tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
     - name: Upload Artifact
       uses: actions/upload-artifact@main
       with:
