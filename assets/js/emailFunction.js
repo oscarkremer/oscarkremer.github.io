@@ -10,8 +10,8 @@ const firebaseConfig = {
     projectId: "emailwithfirebase-a2cac",
     storageBucket: "emailwithfirebase-a2cac.appspot.com",
     messagingSenderId: "646819307545",
-    appId: "1:646819307545:web:c99ed79fdcdbc5730eca88",
-    measurementId: "G-RG6BS8XBFX"
+    appId: "1:646819307545:web:2374ffcfe044addc0eca88",
+    measurementId: "G-9FL5J7C2Y5"
     };
     firebase.initializeApp(firebaseConfig);
     const functions = firebase.functions();
