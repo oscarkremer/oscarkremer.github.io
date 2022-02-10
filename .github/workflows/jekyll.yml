@@ -34,7 +34,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Dep the site in the jekyll/builder container
-      uses: actions/deploy-pages@v1
+      permissions:
+        actions: write
+        checks: write
+        contents: write
+        deployments: write
+        issues: write
+        packages: write
+        pull-requests: write
+        repository-projects: write
+        security-events: write
+        statuses: write
+      uses: actions/deploy-pages@v1      
       with: 
           timeout: 600000
           error_count: 10
