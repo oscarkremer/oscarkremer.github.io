@@ -39,4 +39,4 @@ jobs:
           timeout: 600000
           error_count: 10
           reporting_interval: 1000
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
