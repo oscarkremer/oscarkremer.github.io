@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: [actions/checkout@v2, actions/jekyll-build-pages@v1,actions/upload-artifact@main]
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
